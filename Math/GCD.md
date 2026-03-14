@@ -35,10 +35,6 @@ public static int findGCD(int a, int b) {
 }
 ```
 
-### Time Complexity
-- **Time:** O(log(min(a, b)))
-- **Space:** O(1)
-
 
 ## Algorithm: Euclidean Algorithm
 
@@ -46,10 +42,6 @@ public static int findGCD(int a, int b) {
 1. If `b == 0`, return `a`
 2. Otherwise, recursively find GCD(b, a % b)
 3. Base case ensures we get the GCD
-
-### Time Complexity
-- **Time:** O(log(min(a, b)))
-- **Space:** O(1) for iterative, O(log(min(a, b))) for recursive (call stack)
 
 ## Implementations
 
@@ -65,6 +57,7 @@ public static int findGCD(int a, int b) {
 }
 ```
 
+
 ### Java - Recursive
 ```java
 public static int findGCD(int a, int b) {
@@ -74,3 +67,12 @@ public static int findGCD(int a, int b) {
 }
 ```
 
+## Complexity Comparison
+
+| Algorithm | Time Complexity | Space Complexity | Notes |
+| --- | --- | --- | --- |
+| Euclidean (Iterative) | O(log(min(a, b))) | O(1) | Most efficient, no recursion |
+| Euclidean (Recursive) | O(log(min(a, b))) | O(log(min(a, b))) | Call stack depth increases |
+| Subtraction Method | O(max(a, b)) | O(1) | Much slower for large numbers |
+| Binary GCD (Stein's) | O(log(min(a, b))) | O(log(min(a, b))) | Optimized, fewer divisions |
+| Naive (Brute Force) | O(min(a, b)) | O(1) |  |
