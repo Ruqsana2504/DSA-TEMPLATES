@@ -3,7 +3,7 @@
 ## Overview
 GCD finds the largest positive integer that divides both numbers without a remainder.
 
-## Algorithm - Subtraction Method
+## Algorithm
 
 1. If both numbers are equal, return that number.
 2. Ensure `a` is the smaller number.
